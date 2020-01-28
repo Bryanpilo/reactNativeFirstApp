@@ -6,10 +6,11 @@ import FlatList from './src/screens/FlatList';
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
-    ComponentScreen: FlatList
+    ComponentScreen: ComponentScreen,
+    FlatList: FlatList
   },
   {
-    initialRouteName: 'ComponentScreen',
+    initialRouteName: 'Home',
     defaultNavigationOptions: {
       title: 'My first app'
     }

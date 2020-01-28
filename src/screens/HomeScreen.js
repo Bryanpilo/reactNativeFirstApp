@@ -1,13 +1,27 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 
-const HomeScreen = () => {
-  return <Text style={styles.text}>First React Native application</Text>;
+const HomeScreen = (prop) => {
+  // return <Text style={styles.text}>First React Native application</Text>;
+  return (
+    <View>
+      <Text style={styles.text}>First React Native application</Text>
+      <Button 
+        title="Go to components demo"
+        onPress={()=>prop.navigation.navigate("ComponentScreen")}
+      />
+      <TouchableOpacity 
+        onPress={()=>prop.navigation.navigate("FlatList")}
+      >
+        <Text>Go to list demo</Text>
+      </TouchableOpacity>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 30
+    fontSize: 10
   }
 });
 
